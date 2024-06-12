@@ -1,0 +1,58 @@
+:root {
+    --cor-primaria: #F464C3;
+    --cor-secundaria: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+}
+
+#sobre {
+    font-size: 25px;
+}
+
+.titulo {
+    font-size: 25px;
+}
+
+#ludofashion {
+    font-size: 35px;
+}
+
+.mulher {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+    padding: 10px;
+}
+
+#instagram,
+#whatsapp,
+#twitter {
+    padding: 0.3rem;
+}
