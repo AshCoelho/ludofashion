@@ -1,54 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 :root {
     --cor-primaria: #F464C3;
-    --cor-secundaria: white;
+    --cor-secundaria: rgb(0, 0, 0);
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    width: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
 }
 
 header {
     background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
+    color: black;
     display: flex;
     justify-content: space-between;
-    padding: 0.75rem;
-}
-
-#sobre {
-    font-size: 25px;
-}
-
-.titulo {
-    font-size: 25px;
-}
-
-#ludofashion {
-    font-size: 35px;
-}
-
-.mulher {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    padding: 1rem;
+    align-items: center;
 }
 
 main {
     flex-grow: 1;
+    padding: 1rem;
+}
+
+#sobre {
+    font-size: 40px;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.titulo-main {
+    
+    font-size: 40px;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+#ludofashion {
+    margin: 10px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.mulher {
+    padding: 1.5rem;
+    border-radius: 50%;
+    width: 550px;
+    height: 533px;
+}
+
+.descricao {
+    text-align: center;
+    font-size: 30px;
+    padding: 0 20px;
+}
+
+.descricao-img {
+    display: flex;
+    height: 100%;
 }
 
 footer {
     display: flex;
     flex-direction: row-reverse;
     margin: 20px;
-    padding: 10px;
 }
 
 #instagram,
