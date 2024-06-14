@@ -98,24 +98,32 @@ nav a:first-child {
 
 .conteudo h1{
     text-align: center;
-
+    padding-bottom: 1rem;
+    font-weight: 300;
 }
 
 .card-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
-
 }
 
 .card {
     border: 1px solid var(--cor-secundaria);
-    border-radius: 8px;
-    background-color: var(--cor-secundaria);
+    border-radius: 5px;
+    background-color: var(--cor-branco);
+    box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
+    transition: all 0.3s ease-out;
+    
 }
 
-.card-img img {
-    border-radius: 8px 8px 0 0;
+.card:hover {
+    transform: translateY(-6px);
+    cursor: pointer;
+}
+ img {
+    border-radius: 5px 5px 0 0;
+    
 }
 
 .card-content {
