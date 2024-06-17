@@ -44,6 +44,16 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;
+
+}
+
+#buscar {
+    flex-grow: 0.75;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
 }
 
 #buscar-link {
@@ -61,10 +71,11 @@ main {
 }
 
 #btn-buscar {
+   
     background-color: transparent;
     border: none;
     position: absolute;
-    right: 11%;
+    right: 12%;
     cursor: pointer;
 }
 a {
@@ -85,12 +96,21 @@ nav a:first-child {
     
 }
 
+.sobre:hover, .catalogo:hover {
+    color: #FDACE0;
+    padding: 0;
+    background-color: #3D1C31;
+    transition: all 0.4s ease-out;
+}
+
 #banner {
-    background-image: url(foto-mulheres.jpg);
-    height: 400px;
+
+    width: 100%;
+    background-image: url(fmulher-rosa.jpg);
+    height: 500px;
     position: relative;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 #txt-banner {
@@ -113,16 +133,21 @@ nav a:first-child {
 .card-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    justify-content: space-around;
-    gap: 1rem;}
+    justify-content: center;
+    gap: 1rem;
+}
 
 .card {
     box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
     border: none;
     border-radius: 8px;
-    transition: all 0.3s ease-out;
-    height: 300px;
+    transition: all 0.5s ease-out;
     width: 200px;
+    height: 300px;
+}
+.teste {
+    display: flex;
+    justify-content: center;
 }
 
 .card:hover {
