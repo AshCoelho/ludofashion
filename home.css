@@ -9,6 +9,10 @@
     --cor-preto: black;
 }
 
+body {
+    flex-direction: column;
+    height: 100vh;
+}
 * {
     font-family: "Oswald", sans-serif;
     font-weight: 500;
@@ -24,6 +28,11 @@ header {
     padding: 1rem;
     align-items: center;
     font-size: 25px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 0px;
 }
 
 .ludo {
@@ -77,12 +86,11 @@ nav a:first-child {
 }
 
 #banner {
-    width: 100%;
-    background-image: url(fmulher-rosa.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(foto-mulheres.jpg);
     height: 400px;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #txt-banner {
@@ -105,15 +113,16 @@ nav a:first-child {
 .card-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-}
+    justify-content: space-around;
+    gap: 1rem;}
 
 .card {
     box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
-    border: 1px solid var(--cor-secundaria);
+    border: none;
     border-radius: 8px;
-    background-color: var(--cor-branco);
     transition: all 0.3s ease-out;
+    height: 300px;
+    width: 200px;
 }
 
 .card:hover {
@@ -121,17 +130,18 @@ nav a:first-child {
     cursor: pointer;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    cursor: pointer;
-}
  img {
     border-radius: 5px 5px 0 0;
     
 }
 
-.card-content {
-    color: var(--cor-preto);
-    padding: 1rem;
-    text-align: center;
+footer {
+    background-color: #F564C3;
+    margin: 0;
+    display: block;
+} 
+
+.contato {
+    padding: 60px;
+    
 }
