@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 :root {
-    --cor-primaria: #F564C3;
+    --cor-primaria: #FF0099;
     --cor-secundaria: #3D1C31;
     --cor-tercearia: #FDACE0;
     --cor-branco: white;
@@ -88,7 +88,7 @@ nav {
     text-align: center;
     background-color: var(--cor-tercearia);
     padding: 0.5rem;
-
+    border-bottom: 1px solid var(--cor-preto);
 }
 
 nav a:first-child {
@@ -103,3 +103,88 @@ nav a:first-child {
     transition: all 0.4s ease-out;
 }
 
+#main {
+    display: flex;
+    flex-direction: row;
+}
+
+#detalhe-rosa {
+    
+    height: 160px;
+    background-color: var(--cor-primaria);
+    clip-path: polygon(50% 65%, 100% 38%, 100% 0, 0 0, 0% 38%);
+}
+.menu {
+    font-size: 25px;
+    width: 15%;
+    margin: 0;
+    border-right: 1px solid var(--cor-preto);
+}
+
+.radio {
+    height: 20px;
+    width: 50px;
+}
+
+
+.titulo-principal {
+    font-size: 30px;
+    padding-top: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-secundario {
+    font-size: 25px;
+    padding-bottom: 20px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo-categoria {
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.catalogo-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 1rem;
+}
+
+.catalogo-container {
+    width: 100%;
+}
+#grid-container-flex {
+
+    display: flex;
+    justify-content: center;
+}
+
+.teste {
+    display: flex; flex-direction: column; align-items: center;
+}
+.produtos {
+    box-shadow: 7px 7px 13px 0 var(--cor-secundaria);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.5s ease-out;
+    width: 250px;
+    height: 350px;
+}
+.produtos:hover {
+    transform:  translateY(-5px);
+    cursor: pointer;
+}
+
+.descricao-produto {
+    padding: 10px;
+    text-align: center;
+}

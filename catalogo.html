@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
 
 <body>
     <header>
-        <a href="" class="ludo">LudoFashion</a>
+        <a href="home.html" class="ludo">LudoFashion</a>
         <form action="" id="form-buscar">
             <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
             <button type="submit" id="btn-buscar" alt=""><img src="lupa.png" alt="lupa" width="25px"></button>
@@ -33,54 +34,67 @@
     <main>
         <section id="main">
             <div class="menu">
-                <h1>Categorias</h1>
+                <div id="detalhe-rosa">
+                    <h1 id="titulo-categoria">Categorias</h1>
+                </div>
 
-                <input type="radio">
-                <label for="">Blusas</label> <br>
+                <input type="radio" class="radio">
+                <label for="" class="menu-produto">Blusas</label> <br>
 
-                <input type="radio">
-                <label for="">Saias</label> <br>
+                <input type="radio" class="radio">
+                <label for="" class="menu-produto">Saia</label> <br>
 
-                <input type="radio">
-                <label for="">Vestidos</label> <br>
+                <input type="radio" class="radio">
+                <label for="" class="menu-produto">Vestidos</label> <br>
 
-                <input type="radio">
-                <label for="">Roupas Intimas</label> <br>
+                <input type="radio" class="radio">
+                <label for="" class="menu-produto">Roupas Intimas</label> <br>
 
-                <input type="radio">
-                <label for="">Maquiagem</label> <br>
+                <input type="radio" class="radio">
+                <label for="" class="menu-produto">Maquiagem</label> <br>
 
-                <input type="radio">
-                <label for="">Bolsa</label> <br>
+                <input type="radio" class="radio">
+                <label for="" class="menu-produto">Bolsa</label> <br>
             </div>
 
-            <div class="catalogo">
-                <h1>Conheça nosso catálogo de produtos</h1>
-                <p>Os mais variados produtos femininos, com os melhores preços do mercado</p>
-                <div class="catalogo-grid">
-                    <img src="base.jpg" alt="base maquiagem">
-                    <p>Base</p>
-
-                    <img src="blaser.jpg" alt="blaser">
-                    <p>Blaser</p>
-
-                    <img src="anti-idade.jpg" alt="anti-idade">
-                    <p>Loçãp Anti Idade</p>
-
-                    <img src="paleta.jpg" alt="paleta maquiagem">
-                    <p>Paleta Maquiagem</p>
-
-                    <img src="vestido-verde.jpg" alt="vestido">
-                    <p>Vestido Verde Elegante</p>
-
-                    <img src="batom.jpg" alt="batom">
-                    <p>Batom</p>
-                </div>
+            <div class="catalogo-container">
+                <h1 class="titulo-principal">Conheça nosso catálogo de produtos</h1>
+                <p class="titulo-secundario">Os mais variados produtos femininos, com os melhores preços do mercado</p>
+                
+                    <div class="catalogo-grid">
+                        <div class="teste">
+                            <img src="base.jpg" alt="base maquiagem" width="100%" class="produtos">
+                            <p class="descricao-produto">Base</p>
+                        </div>
+                        
+                        <div class="teste">
+                            <img src="blaser.jpg" alt="blaser" width="100%" class="produtos">
+                            <p class="descricao-produto">Blaser Feminino Roxo</p>
+                        </div>
+                        <div class="teste">
+                            <img src="anti-idade.jpg" alt="anti-idade" width="100%" class="produtos">
+                            <p class="descricao-produto">Kit anti-idade</p>
+                        </div>
+                        <div class="teste">
+                            <img src="paleta.jpg" alt="paleta maquiagem" width="100%" class="produtos">
+                            <p class="descricao-produto">Paleta de Maquiagem</p>
+                        </div>
+                        <div class="teste">
+                            <img src="vestido-verde.jpg" alt="vestido" width="100%" class="produtos">
+                            <p class="descricao-produto">Vestido Musgo Justo</p>
+                        </div>
+                        <div class="teste">
+                            <img src="batom.jpg" alt="batom" width="100%" class="produtos">
+                            <p class="descricao-produto">Kit batons </p>
+                        </div>
+                    </div>
+                
             </div>
         </section>
     </main>
     <footer>
-         
+
     </footer>
 </body>
+
 </html>
