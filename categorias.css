@@ -103,93 +103,60 @@ nav a:first-child {
     transition: all 0.4s ease-out;
 }
 
-#main {
+#menu-limpo {
     display: flex;
-    flex-direction: row;
-}
-
-#detalhe-rosa {
-    
-    height: 160px;
-    background-color: var(--cor-primaria);
-    clip-path: polygon(50% 65%, 100% 38%, 100% 0, 0 0, 0% 38%);
-}
-.menu {
-    font-size: 25px;
     width: 20%;
+    height: 100vh;
     margin: 0;
     border-right: 1px solid var(--cor-preto);
 }
 
-.radio {
-    height: 20px;
-    width: 50px;
+section {
+    display: flex;
+    flex-direction: row;
 }
 
+#main-categoria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+}
 
-.titulo-principal {
-    font-size: 30px;
-    padding-top: 20px;
-    margin: 10px;
+.menu-cat {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 1rem 0;
+    font-size: 35px;
 }
 
-.titulo-secundario {
-    font-size: 25px;
-    padding-bottom: 4rem;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.menu-icon {
+    width: 60px;
+    padding: 0;
 }
-
-#titulo-categoria {
-    font-size: 30px;
-    text-align: center;
-    
-}
-
-.catalogo-grid {
+#categoria-grid {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    gap: 1rem;
+    gap: 1rem; 
 }
 
-.catalogo-container {
+#categoria-container {
     width: 100%;
 }
-#grid-container-flex {
 
+#adicionar-produtos {
     display: flex;
     justify-content: center;
+    width: 80%;
 }
 
-.teste {
-    display: flex; flex-direction: column; align-items: center;
-}
-.produtos {
-    box-shadow: 7px 7px 13px 0 var(--cor-secundaria);
-    border: none;
-    border-radius: 8px;
-    transition: all 0.5s ease-out;
-    width: 250px;
-    height: 350px;
-}
-.produtos:hover {
-    transform:  translateY(-5px);
-    cursor: pointer;
-}
-
-.descricao-produto {
-    padding: 10px;
-    text-align: center;
-}
-
-.coracao:hover {
-    background-color: red;
-    background-color: cover;
-}
