@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 :root {
-    --cor-primaria: #F564C3;
+    --cor-primaria: #FF0099;
     --cor-secundaria: #3D1C31;
     --cor-tercearia: #FDACE0;
     --cor-branco: white;
@@ -110,7 +110,7 @@ nav a:first-child {
     height: 500px;
     position: relative;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100%;
 }
 
 #txt-banner {
