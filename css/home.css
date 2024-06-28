@@ -106,7 +106,7 @@ nav a:first-child {
 #banner {
 
     width: 100%;
-    background-image: url(fmulher-rosa.jpg);
+    background-image: url(../img/fmulher-rosa.jpg);
     height: 500px;
     position: relative;
     background-repeat: no-repeat;
