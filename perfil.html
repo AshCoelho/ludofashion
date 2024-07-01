@@ -14,7 +14,7 @@
             <button type="submit" id="btn-buscar" alt=""><img src="img/lupa.png" alt="" width="25px"></button>
         </form>
 
-        <a href="" class="icon-link">
+        <a href="perfil.html" class="icon-link">
             <img src="img/perfil.png" alt="">
             Cadastre-se
         </a>
@@ -39,28 +39,34 @@
             </div>
                 <div id="perfil">
                     <div id="titulo-perfil">
-                        <h1>Meu perfil</h1>
-                        <p>Gerenciar e proteger sua conta</p>
+                        <h1 class="titulo">Meu perfil</h1>
+                        <p class="titulo">Gerenciar e proteger sua conta</p>
                     </div>
                 
                 <div id="perfil-grid">
                     <form action="">
-                        <label for="" id="nome-usuario">Nome do usuário:</label>
-                        <input type="text" name="nome-usuario"> <br>
-                        <label for="">Nome:</label>
-                        <input type="text" name="nome"> <br>
+                        <label for="" id="nome-usuario" >Nome do usuário:</label>
+                        <input type="text" name="nome-usuario" class="input" placeholder="Fulano123" id="nomeuser"> <br>
+
+                        <label for="" id="nome">Nome:</label>
+                        <input type="text" name="nome" placeholder="Fulano da Silva Costa" id="nome"> <br>
+
                         <label for="">Número de telefone:</label>
-                        <input type="tel" name="telefone" placeholder="(00) 0000-0000"> Editar <br>
+                        <input type="tel" name="telefone" placeholder="(98) 9 3576-9232" class="input"> <a href="" class="editar">Editar</a> <br>
+
                         <label for="">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="exemplo@mail.com"> Editar <br>
-                        <label for="">Sexo:</label>
-                        <input type="radio" name="sexo" id="sexo"> Masculino
-                        <input type="radio" name="sexo" id="sexo"> Feminino
-                        <input type="radio" name="sexo" id="sexo"> Outros<br>
+                        <input type="email" name="email" id="email" placeholder="fulanocosta@gmail.com" class="input"> <a href="" class="editar">Editar</a> <br>
+
+                        <label for=""  class="input">Sexo:</label>
+                        <input type="radio" name="sexo"  > Masculino
+                        <input type="radio" name="sexo"  > Feminino
+                        <input type="radio" name="sexo"  > Outros<br>
+
                         <label for="">Nome/CPF</label>
-                        <input type="text"> Editar <br>
+                        <input type="text" name="cpf" class="input" placeholder="Fulano Costa - 071.843.281-23"> <a href="" class="editar">Editar</a> <br>
+
                         <label for="" name="nascimento" id="nascimento">Data de nascimento:</label>
-                        <input type="date"> <br>
+                        <input type="date" class="input" placeholder="03/06/2000"> <br>
 
                         <input type="submit" value="Gravar" id="gravar">
                     </form>
@@ -70,7 +76,7 @@
         </section>
     </main>
     <footer>
-        
+         
     </footer>
 </body>
-</html>
+</html> 

@@ -114,6 +114,7 @@ nav a:first-child {
 section {
     display: flex;
     flex-direction: row;
+    height: 50vh;
 }
 
 
