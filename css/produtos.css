@@ -104,8 +104,7 @@ nav a:first-child {
 }
 
 #nav-nav {
-    padding: 1rem;
-    height: 5%;
+    padding: 0.4rem;
     background-color: var(--cor-primaria);
 }
 
@@ -133,24 +132,35 @@ nav a:first-child {
     display: flex;
     flex-direction: row;
     padding: 1rem;
-    justify-content: space-around;
+    
 }
 #imagem {
+    margin-left: 20%;
     border: 1px solid var(--cor-primaria);
 }
 
 #tabela-detalhe{
+    margin-left: 20%;
+    height: 30%;
     border: 1px solid var(--cor-primaria);
-}
-
-.detalhe-det {
-    margin: 1rem;
     background-color: var(--cor-branco);
 }
+
+
 footer {
     display: flex;
-    padding: 1rem;
     flex-direction: row-reverse;
-    height: 3rem;
+    height: 8.8%;
     background-color: var(--cor-primaria);
+}
+
+#confi{
+    margin-right: 5%;
+    align-content: center;
+}
+#confi:hover {
+    border-radius: 17px;
+    padding: 0.1rem 1rem 0.1rem 1rem;
+    background-color: var(--cor-tercearia);
+    
 }
