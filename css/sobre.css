@@ -142,17 +142,6 @@ main {
     height: 80%;
 }
 
-footer {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-#instagram,
-#whatsapp,
-#twitter {
-    margin-bottom: 0;
-    padding: 0 0.2rem 0 0.2rem;
-}
 
 footer {
     background-color: var(--cor-primaria);

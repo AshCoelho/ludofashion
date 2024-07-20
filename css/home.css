@@ -164,7 +164,7 @@ nav a:first-child {
 footer {
     background-color: var(--cor-primaria);
     color: var(--cor-preto);
-    padding: 20px 0;
+    padding: 5px 0;
 }
 
 .footer-container {

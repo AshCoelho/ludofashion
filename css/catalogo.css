@@ -179,7 +179,7 @@ nav a:first-child {
     border-radius: 8px;
     transition: all 0.5s ease-out;
     width: 250px;
-    height: 350px;
+    height: 300px;
 }
 .produtos:hover {
     transform:  translateY(-5px);
