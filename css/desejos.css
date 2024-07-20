@@ -169,12 +169,15 @@ section {
     margin: 0 5px 20px 20px;
 }
 
+.descricao:hover {
+    color: var(--cor-branco);
+}
 #preco1 {
-    margin-left: 55%;
+    margin-left: 53.5%;
 }
 
 #preco2 {
-    margin-left: 62%;
+    margin-left: 48.5%;
 }
 
 #preco3 {

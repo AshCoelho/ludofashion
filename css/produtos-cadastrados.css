@@ -31,6 +31,7 @@ header {
 }
 
 main {
+    background-color: var(--cor-tercearia);
     flex-grow: 1;
     padding: 0px;
 }
@@ -106,12 +107,32 @@ nav a:first-child {
 #nav-nav {
     display: flex;
     padding: 0.4rem;
+    background-image: url('/ludofashion/img/papelde.jpg');
+    justify-content: space-between;
+    
+}
+
+#nav1 {
+    margin-left: 1rem;
+    font-size: 30px;
+}
+#nav2 {
+    margin-right: 1rem;
+    font-size: 20px;
+    padding: 0.2rem 1.5rem 0.2rem 1.5rem;
+    border-radius: 30px;
+    background-color: var(--cor-tercearia);
+}
+
+#nav2:hover {
     background-color: var(--cor-primaria);
+    color: var(--cor-branco);
 }
 
 .fila1 {
     display: flex;
     margin: 30px 0 0 20px;
+    height: 2.5rem;
 }
 
 .fila11 {
@@ -149,6 +170,7 @@ nav a:first-child {
     display: flex;
     margin-left: 20px;
     margin-top: 10px;
+    height: 2.5rem;
 }
 .fila16 {
     border: 1px solid var(--cor-preto);
@@ -185,6 +207,7 @@ nav a:first-child {
     display: flex;
     margin-left: 20px;
     margin-top: 10px;
+    height: 2.5rem;
 }
 
 .fila21 {
@@ -222,6 +245,7 @@ nav a:first-child {
     display: flex;
     margin-left: 20px;
     margin-top: 10px;
+    height: 2.5rem;
 }
 
 .fila26 {
@@ -259,6 +283,7 @@ nav a:first-child {
     display: flex;
     margin-left: 20px;
     margin-top: 10px;
+    height: 2.5rem;
 }
 
 .fila31 {
@@ -267,6 +292,7 @@ nav a:first-child {
     border-radius: 5px;
     background-color: var(--cor-primaria);
     text-align: center;
+    align-items: center;
 }
 .fila32 {
     border: 1px solid var(--cor-preto);
@@ -291,4 +317,9 @@ nav a:first-child {
     padding: 0.2rem 15.2rem 0.2rem 0.5rem;
     border-radius: 5px;
     background-color: var(--cor-primaria);
+}
+footer {
+    margin-top: 12.1%;
+    height: 3rem;
+    background-image: url('/ludofashion/img/papelde.jpg');
 }

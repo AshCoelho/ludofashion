@@ -106,7 +106,7 @@ nav a:first-child {
 #banner {
 
     width: 100%;
-    background-image: url(../img/fmulher-rosa.jpg);
+    background-image: url(../img/muleresrindo.jpg);
     height: 500px;
     position: relative;
     background-repeat: no-repeat;
@@ -131,6 +131,7 @@ nav a:first-child {
 }
 
 .card-container {
+    height: 18rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
@@ -143,7 +144,7 @@ nav a:first-child {
     border-radius: 8px;
     transition: all 0.5s ease-out;
     width: 200px;
-    height: 300px;
+    height: 230px;
 }
 .teste {
     display: flex;
@@ -158,15 +159,69 @@ nav a:first-child {
  img {
     border-radius: 5px 5px 0 0;
     
-}
-
-footer {
-    background-color: #F564C3;
-    margin: 0;
-    display: block;
 } 
 
-.contato {
-    padding: 60px;
-    
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-preto);
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color:var(--cor-preto);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section .social-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-section .social-links a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
 }

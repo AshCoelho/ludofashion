@@ -160,9 +160,8 @@ section {
 #adicionar-produtos {
     color: var(--cor-branco);
     display: flex;
-    justify-content: center;
-    width: 80%;
-    padding: 2rem;
+    justify-content: center; 
+    padding: 1rem;
 }
 
 .flex {
