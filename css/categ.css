@@ -11,7 +11,7 @@
 
 body {
     flex-direction: column;
-    height: 100vh; 
+    height: 100vh;
 }
 * {
     font-family: "Oswald", sans-serif;
@@ -97,71 +97,130 @@ nav a:first-child {
 }
 
 .sobre:hover, .catalogo:hover {
-    color: var(--cor-tercearia);
+    color: #FDACE0;
     padding: 0;
     background-color: #3D1C31;
     transition: all 0.4s ease-out;
 }
 
-#nav-nav {
-    padding: 0.4rem;
-    background-image: url('/ludofashion/img/papelde.jpg');
+#main {
+    display: flex;
+    flex-direction: row;
 }
 
-#main {
-    width: 100%;
+#estrela {
+    margin-left: 1rem;
+}
+
+#detalhe-rosa {
+    
+    height: 160px;
+    background-color: var(--cor-primaria);
+    clip-path: polygon(50% 65%, 100% 38%, 100% 0, 0 0, 0% 38%);
+}
+.menu {
+    font-size: 25px;
+    width: 30%;
+    margin: 0;
+    border-right: 1px solid var(--cor-preto);
+}
+
+.radio {
+    height: 20px;
+    width: 50px;
+}
+
+
+.titulo-principal {
+    font-size: 30px;
+    padding-top: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-secundario {
+    font-size: 25px;
+    padding-bottom: 4rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo-categoria {
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+#main-container {
+    padding: 2rem;
+}
+
+#short {
+   display: flex;
+   justify-content: space-around; 
+}
+
+#short-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#short-img img {
+    width: 120px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#short-centralizado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#short-centralizado img {
+    width: 450px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+
+#estrela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+#estrela img {
+    width: 25px;
+}
+
+#short-a {
     display: flex;
     flex-direction: column;
 }
 
-#fundo {
-    background-color: var(--cor-tercearia);
-}
-#tabela {
-    margin: 1rem;
-}
-.linha {
-    background-color: var(--cor-branco);
-    border: 1px solid var(--cor-primaria);
-    padding: 0.4rem;
-}
-
-#img {
-    height: 350px;
+#tam-short {
     display: flex;
-    flex-direction: row;
-    padding: 1rem;
-    
-}
-#imagem {
-    margin-left: 20%;
-    border: 1px solid var(--cor-primaria);
 }
 
-#tabela-detalhe{
-    margin-left: 20%;
-    height: 30%;
-    border: 1px solid var(--cor-primaria);
-    background-color: var(--cor-branco);
+#tam-short p {
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 0.3rem;
 }
 
-
-footer {
-    display: flex;
-    flex-direction: row-reverse;
-    height: 8.8%;
-    background-image: url('/ludofashion/img/papelde.jpg');
+#tam-short p:hover {
+    background-color:#FDACE0;
 }
-
-#confi{
-    margin-right: 5%;
-    align-content: center;
-}
-#confi:hover {
-    border-radius: 17px;
-    padding: 0.1rem 1rem 0.1rem 1rem;
-    background-color: var(--cor-tercearia);
-    
+#tam-short p {
+    margin-right: 10px;
 }
 
 footer {
