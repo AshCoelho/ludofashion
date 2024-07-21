@@ -152,6 +152,9 @@ nav a:first-child {
     text-align: center;
     
 }
+#titulo-categoria:hover {
+    color: var(--cor-tercearia);
+}
 
 .catalogo-grid {
 
