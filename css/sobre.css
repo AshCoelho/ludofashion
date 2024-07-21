@@ -52,6 +52,7 @@ header {
 }
 
 .icon-link {
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,7 +145,7 @@ main {
 
 
 footer {
-    margin-top: 3rem;
+    margin-top: 5.3rem;
     background-color: var(--cor-primaria);
     color: var(--cor-preto);
     padding: 20px 0;

@@ -22,6 +22,7 @@ body {
 }
 
 header {
+    height: 13%;
     font-weight: 500;
     background-color: var(--cor-primaria);
     display: flex;
@@ -30,13 +31,9 @@ header {
     font-size: 25px;
 }
 
-main {
-    flex-grow: 1;
-    padding: 0px;
-}
 
 .ludo {
-    font-size: 40px;
+    font-size: 30px;
 }
 #form-buscar {
     flex-grow: 1;
@@ -64,6 +61,7 @@ main {
 }
 
 .icon-link {
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +73,7 @@ main {
     background-color: transparent;
     border: none;
     position: absolute;
-    right: 14%;
+    right: 12%;
     cursor: pointer;
 }
 a {
@@ -88,7 +86,7 @@ nav {
     text-align: center;
     background-color: var(--cor-tercearia);
     padding: 0.5rem;
-    border-bottom: 1px solid var(--cor-preto);
+
 }
 
 nav a:first-child {
@@ -177,7 +175,6 @@ form {
 }
 
 .input {
-    width: 14rem;
     margin-bottom: 3%;
     background-color: var(--cor-tercearia);
     border: none;
@@ -188,7 +185,9 @@ input:hover {
 footer { 
     border-top: 2px solid;
 }
-
+#nomeuser {
+    width: 30%;
+}
 #gravar {
     padding: 2% 4% 2% 4%;
     background-color: var(--cor-primaria);
@@ -199,7 +198,9 @@ footer {
 #gravar:hover {
     background-color: var(--cor-secundaria);
 }
-
+#edit {
+    margin-left: -2.3rem;
+}
 .editar {
     color: var(--cor-primaria);
 }
@@ -207,7 +208,12 @@ footer {
     color: var(--cor-branco)
 }
 
+#editar {
+    margin-left: 0.6rem;
+}
+
 footer {
+    margin-top: 3.8rem;
     background-color: var(--cor-primaria);
     color: var(--cor-preto);
     padding: 20px 0;
