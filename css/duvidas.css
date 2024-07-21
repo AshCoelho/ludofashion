@@ -13,7 +13,6 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
 }
 
 * {
@@ -26,6 +25,7 @@ body {
 }
 
 header {
+    font-weight: 500;
     background-color: var(--cor-primaria);
     display: flex;
     padding: 1rem;
@@ -253,3 +253,6 @@ footer {
     font-size: 0.9em;
 }
 
+.font {
+    font-weight: 400;
+}

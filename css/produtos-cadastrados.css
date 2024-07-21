@@ -14,7 +14,6 @@ body {
 * {
     font-size: 20px;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -22,6 +21,7 @@ body {
 }
 
 header {
+    font-weight: 500;
     background-color: var(--cor-primaria);
     display: flex;
     padding: 1rem;
@@ -386,4 +386,7 @@ footer {
 
 .footer-bottom p {
     font-size: 0.9em;
+}
+.font {
+    font-weight: 400;
 }
