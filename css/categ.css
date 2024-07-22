@@ -121,7 +121,7 @@ nav a:first-child {
 }
 .menu {
     font-size: 25px;
-    width: 30%;
+    width: 40%;
     margin: 0;
     border-right: 1px solid var(--cor-preto);
 }
@@ -151,9 +151,16 @@ nav a:first-child {
 }
 
 #titulo-categoria {
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
-    
+    font-weight: 400;
+}
+
+#titulo-categoria:hover {
+    color: var(--cor-tercearia);
+}
+#descricao-short {
+    font-size: 25px;
 }
 
 #main-container {

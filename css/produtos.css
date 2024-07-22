@@ -122,9 +122,21 @@ nav a:first-child {
     margin: 1rem;
 }
 .linha {
+    font-size: 16px;
     background-color: var(--cor-branco);
     border: 1px solid var(--cor-primaria);
     padding: 0.4rem;
+}
+
+td {
+    font-size: 16px;
+}
+
+.titulo-1 {
+    border-radius: 20px;
+    padding: 0.3rem;
+    display: inline-block;
+    background-color: #FDACE0;
 }
 
 #img {
@@ -155,17 +167,19 @@ footer {
 }
 
 #confi{
-    margin-right: 5%;
-    align-content: center;
+    margin-top: 20px;
+    margin-right: 30px;
+    align-self: center;
+    border-radius: 20px;
+    padding: 0.4rem 1.5rem 0.4rem 1.5rem;
+    background-color: var(--cor-tercearia);
 }
 #confi:hover {
-    border-radius: 17px;
-    padding: 0.1rem 1rem 0.1rem 1rem;
-    background-color: var(--cor-tercearia);
-    
+    background-color: var(--cor-secundaria);
 }
 
 footer {
+    margin-top: -0.9rem;
     background-color: var(--cor-primaria);
     color: var(--cor-preto);
     padding: 20px 0;

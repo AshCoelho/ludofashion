@@ -148,9 +148,9 @@ nav a:first-child {
 }
 
 #titulo-categoria {
-    font-size: 25px;
+    font-size: 26px;
     text-align: center;
-    
+    font-weight: 400;
 }
 #titulo-categoria:hover {
     color: var(--cor-tercearia);
