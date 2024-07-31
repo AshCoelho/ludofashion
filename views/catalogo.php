@@ -1,41 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/catalogo.css">
     <title>Ludo Fashion</title>
 </head>
-
 <body>
-    <header>
-        <a href="home.html" class="ludo"><img src="img/logo.png" alt="" width="60px"></a>
-        <form action="" id="form-buscar">
-            <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
-            <button type="submit" id="btn-buscar" alt=""><img src="img/lupa.png" alt="lupa" width="25px"></button>
-        </form>
-
-        <a href="perfil.html" class="icon-link">
-            <img src="img/perfil.png" alt="">
-            Cadastre-se
-        </a>
-
-
-        <a href="duvidas.html" class="icon-link">
-            <img src="img/ajuda.png" alt="Ajuda">
-            Dúvidas
-        </a>
-    </header>
-    <nav>
-        <a href="catalogo.html" class="catalogo">Catálogo</a>
-        <a href="sobre.html" class="sobre">Sobre a Loja</a>
-    </nav>
+    <?php @require"header.php"; ?>
     <main>
         <section id="main">
             <div class="menu">
                 <div id="detalhe-rosa">
-                    <a href="categorias.html"><h1 id="titulo-categoria">Categorias</h1></a>
+                    <a href="categorias.php"><h1 id="titulo-categoria">Categorias</h1></a>
                 </div>
 
                 <input type="radio" class="radio">
@@ -56,11 +33,9 @@
                 <input type="radio" class="radio">
                 <label for="" class="menu-produto">Bolsa</label> <br>
             </div>
-
             <div class="catalogo-container">
                 <h1 class="titulo-principal">Conheça nosso catálogo de produtos</h1>
                 <p class="titulo-secundario">Os mais variados produtos femininos, com os melhores preços do mercado</p>
-                
                     <div class="catalogo-grid">
                         <div class="teste">
                             <img src="img/base-c.jpg" alt="base maquiagem" width="100%" class="produtos">
@@ -145,54 +120,9 @@
                             <p class="descricao-produto"><span class="finos">Calça Jenas Rasgada Super Moda</span><br>R$ 169,90 <img src="img/coração.png" alt="coração" class="coracao"></p>
                         </div>
                     </div>
-                
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section about">
-                <h2>Departamentos</h2>
-                <ul class="font">
-                    <li><a href="#">Feminino</a></li>
-                    <li><a href="#">Calçados</a></li>
-                    <li><a href="#">Jeans</a></li>
-                    <li><a href="#">Plus Size</a></li>
-                    <li><a href="#">Lingerie</a></li>
-                    <li><a href="#">Acessórios</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contato">
-                <h2>Contato</h2>
-                <p class="font">Email:contato@ludofashion.com.br</p>
-                <p class="font">Telefone: (98) 1234-5678</p>
-                <p class="font">Endereço: Rua Fictícia, 123, Calhau, São Luís - MA</p>
-            </div>
-            <div class="footer-section about">
-                <h2>Links</h2>
-                <ul class="font">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="catalogo.html">Catálogo</a></li>
-                    <li><a href="duvidas.html">Dúvidas</a></li>
-                    <li><a href="perfil.html">Perfil</a></li>
-                    <li><a href="desejos.html">Lista de Desejos</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="categorias.html">Categoria</a></li>
-                </ul>
-            </div>
-            <div class="footer-section social">
-                <h2>Redes Sociais</h2>
-                <div class="social-links">
-                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="img/ins.png" alt="Instagram"></a>
-                    <a href="#"><img src="img/whats.png" alt="WhatsApp"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="font">&copy; 2024 LudoFashion | Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <?php @require"footer.php"; ?>
 </body>
-
 </html>

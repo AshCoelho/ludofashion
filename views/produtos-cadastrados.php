@@ -7,28 +7,7 @@
     <title>LudoFashion</title>
 </head>
 <body>
-    <header>
-        <a href="home.html" class="ludo"><img src="img/logo.png" alt="" width="60px"></a>
-        <form action="" id="form-buscar">
-            <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
-            <button type="submit" id="btn-buscar" alt=""><img src="img/lupa.png" alt="" width="25px"></button>
-        </form>
-
-        <a href="perfil.html" class="icon-link">
-            <img src="img/perfil.png" alt="">
-            Cadastre-se
-        </a>
-
-        <a href="duvidas.html" class="icon-link">
-            <img src="img/ajuda.png" alt="Ajuda">
-            Dúvidas
-        </a>
-    </header>
-
-    <nav>
-        <a href="catalogo.html" class="catalogo">Catálogo</a>
-        <a href="sobre.html" class="sobre">Sobre a Loja</a>
-    </nav>
+    <?php @require"header.php"; ?>
     <main>
         <div id="nav-nav">
             <h1 id="nav1">Produtos Cadastrados</h1>
