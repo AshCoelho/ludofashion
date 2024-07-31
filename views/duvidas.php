@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/duvidas.css">
+    <link rel="stylesheet" href="../css/duvidas.css">
     <title>Ludo Fashion</title>
 </head>
 <body>
@@ -50,9 +50,9 @@
                 </details>
             </div>
             <div class="descricao">
-                <img src="img/foto10.jpg" alt="mulher com duvidas" class="imagem-mulher">
-                <p class="descricao-img">Ainda com problemas? </p>
-                <p class="descricao-fale">Fale conosco <img src="img/tel.png" alt=""  class="
+                <img src="../img/foto10.jpg" alt="mulher com duvidas" class="imagem-mulher">
+                <p class="../descricao-img">Ainda com problemas? </p>
+                <p class="../descricao-fale">Fale conosco <img src="img/tel.png" alt=""  class="
                     operador"></p>
             </div>
         </div>

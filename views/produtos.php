@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="../css/produtos.css">
     <title>LudoFashion</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
                     </tr>
                 </table>
                 <div id="img">
-                    <p ><a href="categ.html"><img src="img/anabela.jpg" alt="" width="250px" height="250px" id="imagem"></p></a>
+                    <p ><a href="categ.html"><img src="../img/anabela.jpg" alt="" width="250px" height="250px" id="imagem"></p></a>
                     <table id="tabela-detalhe">
                         <td>Sandália Anabela com tira de tornozelo <br>Material Couro PU <br>Detalhes Fivela</td>
                     </table>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/categ.css">
+    <link rel="stylesheet" href="../css/categ.css">
     <title>Ludo Fashion</title>
 </head>
 <body>
@@ -36,26 +36,26 @@
             <div id="main-container">
                 <div id="short">
                     <div id="short-img">
-                        <img src="img/ft-2.jpg" alt="">
-                        <img src="img/ft-4.jpg" alt="">
-                        <img src="img/ft-1.jpg" alt="">
-                        <img src="img/ft-3.jpg" alt="">
+                        <img src="../img/ft-2.jpg" alt="">
+                        <img src="../img/ft-4.jpg" alt="">
+                        <img src="../img/ft-1.jpg" alt="">
+                        <img src="../img/ft-3.jpg" alt="">
                     </div>
     
-                    <div id="short-centralizado"><img src="img/ft-5.jpg" alt=""></div>
+                    <div id="short-centralizado"><img src="../img/ft-5.jpg" alt=""></div>
     
                     <div id="estrela">
                         <div>
                             <h1 id="descricao-short">Short de Alfaiataria Azul</h1>
-                            <a href=""><img src="img/estrela.png" alt=""></a>
-                            <a href=""><img src="img/estrela.png" alt=""></a>
-                            <a href=""><img src="img/estrela.png" alt=""></a>
-                            <a href=""><img src="img/estrela.png" alt=""></a>
-                            <a href=""><img src="img/estrela.png" alt=""></a>
+                            <a href=""><img src="../img/estrela.png" alt=""></a>
+                            <a href=""><img src="../img/estrela.png" alt=""></a>
+                            <a href=""><img src="../img/estrela.png" alt=""></a>
+                            <a href=""><img src="../img/estrela.png" alt=""></a>
+                            <a href=""><img src="../img/estrela.png" alt=""></a>
     
                             <p><strong>R$ 69,00</strong></p>
                             <p>Cor: Azul</p>
-                            <img src="img/circulo-azul.png">
+                            <img src="../img/circulo-azul.png">
     
                             <div id="short-a">
                                 <div id="tam-short">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="../css/perfil.css">
     <title>LudoFashion</title>
 </head>
 <body>
@@ -11,10 +11,10 @@
     <main>
         <section>
             <div id="menu">
-                <p class="menu-icon"><img src="img/perfil-perfil.png" alt="" width="30px" height="30px"><a href="" id="perfil-menu">Minha Conta</a></p>
-                <p  class="menu-icon"><img src="img/coracao-perfil.png" alt="" width="30px" height="30px"><a href="desejos.html" id="coracaoperf">Listas de Desejos</a></p>
-                <p  class="menu-icon"><img src="img/menu-perfil.png" alt="" width="40px" height="40px" id="categ"><a href="categorias.html" id="catego-perfil">Categorias</a></p>
-                <p  class="menu-icon"><img src="img/caixa-perfil.png" alt="" width="30px" height="30px"><a href="produtos.html" id="prod">Produtos</a></p>
+                <p class="menu-icon"><img src="../img/perfil-perfil.png" alt="" width="30px" height="30px"><a href="" id="perfil-menu">Minha Conta</a></p>
+                <p  class="menu-icon"><img src="../img/coracao-perfil.png" alt="" width="30px" height="30px"><a href="desejos.php" id="coracaoperf">Listas de Desejos</a></p>
+                <p  class="menu-icon"><img src="../img/menu-perfil.png" alt="" width="40px" height="40px" id="categ"><a href="categorias.php" id="catego-perfil">Categorias</a></p>
+                <p  class="menu-icon"><img src="../img/caixa-perfil.png" alt="" width="30px" height="30px"><a href="produtos.php" id="prod">Produtos</a></p>
             </div>
             <div id="perfil">
                 <div id="titulo-perfil">
