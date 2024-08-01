@@ -60,9 +60,7 @@
                 </form>
 
             </div>
-        </section>
-               
-                 
+        </section>         
     </main>
     <?php @require"footer.php"; ?>
 </body>
