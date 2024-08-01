@@ -11,7 +11,7 @@
     <main>
         <div id="nav-nav">
             <h1 id="nav1">Produtos Cadastrados</h1>
-            <p id="nav2"><a href="produtos.html">Inserir Produtos</a></p>
+            <p id="nav2"><a href="produtos.php">Inserir Produtos</a></p>
         </div>
         
         <div id="container">
@@ -51,9 +51,7 @@
                 <p class="fila35">Camiseta Branca Esportiva Adidas</p>
             </div>
         </div>
-        <footer>
-            
-        </footer>
+        <footer></footer>
     </main>
 </body>
 </html>

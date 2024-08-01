@@ -27,6 +27,8 @@
                     <li><a href="desejos.php">Lista de Desejos</a></li>
                     <li><a href="sobre.php">Sobre Nós</a></li>
                     <li><a href="categorias.php">Categoria</a></li>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="cadastro.php">Cadastro</a></li>
                 </ul>
             </div>
             <div class="footer-section social">

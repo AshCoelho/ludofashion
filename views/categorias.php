@@ -65,7 +65,7 @@
                        </div>
                    
                     </div>
-                    <a href="produtos-cadastrados.html"><p id="adicionar-produtos" class="animacao"><img src="../img/adicionar.png" alt="adicionar produto" width="25px" height="25px" id="icon-adicionar" class="animacao"> Adicionar categoria<p></a>
+                    <a href="produtos-cadastrados.php"><p id="adicionar-produtos" class="animacao"><img src="../img/adicionar.png" alt="adicionar produto" width="25px" height="25px" id="icon-adicionar" class="animacao"> Adicionar categoria<p></a>
                 </div>
             </div>
     </main>
