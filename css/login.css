@@ -110,12 +110,13 @@ main {
 }
 
 #login {
+    margin: 7rem 0 10rem 0;
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 400px;
-    margin: 50px; 
+   
 }
 
 #formulario h1 {
