@@ -10,16 +10,11 @@ $usuario = new Usuario($conexao);
 
 // Verifica se a requisição é do tipo POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Obtém os dados do formulário
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-    $cpf = $_POST['cpf'];
-    $telefone = $_POST['telefone'];
-    $nome_usuario = $_POST['nome_usuario'];
-    $nascimento = $_POST['nascimento'];
+    // Obtém os IDs dos usuarios selecionados para deletar
+    $ids = $_POST['ids'];
 
-    // Adiciona o usuario no banco de dados
-    $usuario->adicionar($email, $senha, $cpf, $telefone, $nome_usuario, $nascimento);
+    // Deleta os usuarios selecionados no banco de dados
+    $usuario->deletar($ids);
     // Redireciona para a página inicial
     header('Location: index.php');
 }

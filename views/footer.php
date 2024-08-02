@@ -29,6 +29,7 @@
                     <li><a href="categorias.php">Categoria</a></li>
                     <li><a href="login.php">Login</a></li>
                     <li><a href="cadastro.php">Cadastro</a></li>
+                    <li><a href="cadastro.php">cadastro</a></li>
                 </ul>
             </div>
             <div class="footer-section social">

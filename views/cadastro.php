@@ -12,7 +12,7 @@
         <section id="section-cadastro">
             <div id="div-form">
                 <h1>Cadastrar</h1>
-                <form action="" class="action" method="post">
+                <form action="adicionar.php" class="action" method="post">
                     <div class="div-inputs">
                         <div  class="dados">
                             <div class="campo">
@@ -54,7 +54,7 @@
                     <div class="login-cadastro">
                         <a href=""><img src="../img/google.png" alt="logo google de cadastro"></a>
 
-                        <a href="">Salvar</a>
+                        <a href=""><button type="submit">Salvar</button></a>
                         <a href="login.php">Já tem conta?</a>
                     </div>
                 </form>

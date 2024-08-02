@@ -1,5 +1,5 @@
 <?php
-// Declaração da classe Carro
+// Declaração da classe Usuario
 class Usuario {
     // Atributo para armazenar a conexão com o banco de dados
     private $conexao;
@@ -9,10 +9,10 @@ class Usuario {
         $this->conexao = $conexao;
     }
 
-    // Método para adicionar um carro no banco de dados
+    // Método para adicionar um usuario no banco de dados
     public function adicionar($email, $senha, $cpf, $telefone, $nome_usuario, $nascimento) {
-        // SQL para inserir um novo carro
-        $sql = "INSERT INTO carros (email, senha, cpf, telefone, nome_usuario, nascimento) VALUES (:email, :senha, :cpf, :telefone, :nome_usuario, :nascimento)";
+        // SQL para inserir um novo usuario
+        $sql = "INSERT INTO usuarios (email, senha, cpf, telefone, nome_usuario, nascimento) VALUES (:email, :senha, :cpf, :telefone, :nome_usuario, :nascimento)";
         // Prepara a consulta SQL
         $stmt = $this->conexao->prepare($sql);
         // Associa os valores aos parâmetros da consulta
@@ -26,36 +26,38 @@ class Usuario {
         return $stmt->execute();
     }
 
-    // Método para listar todos os carros do banco de dados
+    // Método para listar todos os usuarios do banco de dados
     public function listar() {
-        // SQL para selecionar todos os carros
-        $sql = "SELECT * FROM carros";
+        // SQL para selecionar todos os usuarios
+        $sql = "SELECT * FROM usuarios";
         // Executa a consulta SQL
         $stmt = $this->conexao->query($sql);
         // Retorna todos os resultados da consulta como um array associativo
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Método para editar um carro no banco de dados
-    public function editar($id, $marca, $modelo, $ano, $cor) {
-        // SQL para atualizar os dados de um carro específico
-        $sql = "UPDATE carros SET marca = :marca, modelo = :modelo, ano = :ano, cor = :cor WHERE id = :id";
+    // Método para editar um usuario no banco de dados
+    public function editar($id, $email, $senha, $cpf, $telefone, $nome_usuario, $nascimento) {
+        // SQL para atualizar os dados de um usuario específico
+        $sql = "UPDATE usuarios SET email = :email, cpf = :cpf, telefone = :telefone, nome_usuario = :nome_usuario, nascimento = :nascimento WHERE id = :id";
         // Prepara a consulta SQL
         $stmt = $this->conexao->prepare($sql);
         // Associa os valores aos parâmetros da consulta
         $stmt->bindParam(':id', $id);
-        $stmt->bindParam(':marca', $marca);
-        $stmt->bindParam(':modelo', $modelo);
-        $stmt->bindParam(':ano', $ano);
-        $stmt->bindParam(':cor', $cor);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':senha', $senha);
+        $stmt->bindParam(':cpf', $cpf);
+        $stmt->bindParam(':telefone', $telefone);
+        $stmt->bindParam(':nome_usuario', $nome_usuario);
+        $stmt->bindParam(':nascimento', $nascimento);
         // Executa a consulta e retorna o resultado
         return $stmt->execute();
     }
 
-    // Método para deletar carros selecionados
+    // Método para deletar usuarios selecionados
     public function deletar($ids) {
-        // SQL para deletar os carros cujos IDs estão no array $ids
-        $sql = "DELETE FROM carros WHERE id IN (" . implode(',', $ids) . ")";
+        // SQL para deletar os usuarios cujos IDs estão no array $ids
+        $sql = "DELETE FROM usuarios WHERE id IN (" . implode(',', $ids) . ")";
         // Prepara a consulta SQL
         $stmt = $this->conexao->prepare($sql);
         // Executa a consulta e retorna o resultado
