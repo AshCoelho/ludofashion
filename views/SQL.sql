@@ -25,7 +25,7 @@ INSERT INTO usuarios (nome, email, senha, perfil) VALUES
 
 CREATE DATABASE user;
 
-USE user_registration;
+USE user;
 
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
