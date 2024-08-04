@@ -1,34 +1,33 @@
 <?php
 include_once 'header.php'; // Incluímos o cabeçalho
 include_once 'Database.php'; // Incluímos a classe Database
-include_once 'Usuario..php'; // Incluímos a classe User
+include_once 'Usuario.php'; // Incluímos a classe Usuario
 
 // Criamos uma nova instância da classe Database e obtemos a conexão.
 $database = new Database();
 $db = $database->getConnection();
 
-// Criamos uma nova instância da classe User e passamos a conexão.
-$user = new Usuario($db);
+// Criamos uma nova instância da classe Usuario e passamos a conexão.
+$usuario = new Usuario($db);
 
 // Verificamos se o formulário foi enviado.
 if ($_POST) {
     // Definimos as propriedades do usuário com os valores do formulário.
-    $user->name = $_POST['name'];
-    $user->email = $_POST['email'];
-    $user->senha = $_POST['senha'];
-    $user->cpf = $_POST['cpf'];
-    $user->telefone = $_POST['telefone'];
-    $user->nascimento = $_POST['nascimento'];
+    $usuario->nome = $_POST['nomeusuario'];
+    $usuario->email = $_POST['email'];
+    $usuario->senha = $_POST['senha'];
+    $usuario->cpf = $_POST['cpf'];
+    $usuario->telefone = $_POST['telefone'];
+    $usuario->nascimento = $_POST['datanasc'];
 
     // Tentamos criar o usuário e exibimos uma mensagem de sucesso ou erro.
-    if ($user->create()) {
+    if ($usuario->create()) {
         echo '<div class="alert alert-success">Usuário criado com sucesso.</div>';
     } else {
         echo '<div class="alert alert-danger">Erro ao criar usuário.</div>';
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -44,17 +43,17 @@ if ($_POST) {
         <section id="section-cadastro">
             <div id="div-form">
                 <h1>Cadastrar</h1>
-                <form action="adicionar.php" class="action" method="post">
+                <form action="cadastro.php" method="post">
                     <div class="div-inputs">
-                        <div  class="dados">
+                        <div class="dados">
                             <div class="campo">
                                 <label for="email">E-mail</label>
                                 <input type="email" name="email" id="iemail" placeholder="Seu E-mail" required maxlength="30">
                             </div>
 
                             <div class="campo">
-                                <label for="email">Senha</label>
-                                <input type="nome" name="nome" id="nome" placeholder="Sua Senha" required minlength="8" maxlength="20">
+                                <label for="senha">Senha</label>
+                                <input type="password" name="senha" id="senha" placeholder="Sua Senha" required minlength="8" maxlength="20">
                             </div>
 
                             <div class="campo">
@@ -71,26 +70,22 @@ if ($_POST) {
 
                             <div class="campo">
                                 <label for="telefone">Telefone</label>
-                                <input type="tel" name="telefone" id="itelefone" placeholder="Seu Telefone" required minlength="13" maxlength="13">
+                                <input type="tel" name="telefone" id="telefone" placeholder="Seu Telefone" required maxlength="13">
                             </div>
 
                             <div class="campo">
                                 <label for="datanasc">Data de Nascimento</label>
-                                <input type="date" name="datanasc" id="datanasc" placeholder="Sua data de nascimento" required minlength="8" maxlength="8">
+                                <input type="date" name="datanasc" id="datanasc" required>
                             </div>
                         </div>
                     </div>
 
-                    <input type="submit" value="Entrar">
+                    <input type="submit" value="Cadastrar">
 
                     <div class="login-cadastro">
-                        <a href=""><img src="../img/google.png" alt="logo google de cadastro"></a>
-
-                        <a href=""><button type="submit">Salvar</button></a>
                         <a href="login.php">Já tem conta?</a>
                     </div>
                 </form>
-
             </div>
         </section>         
     </main>
