@@ -1,3 +1,35 @@
+<?php
+include_once 'header.php'; // Incluímos o cabeçalho
+include_once 'Database.php'; // Incluímos a classe Database
+include_once 'Usuario..php'; // Incluímos a classe User
+
+// Criamos uma nova instância da classe Database e obtemos a conexão.
+$database = new Database();
+$db = $database->getConnection();
+
+// Criamos uma nova instância da classe User e passamos a conexão.
+$user = new Usuario($db);
+
+// Verificamos se o formulário foi enviado.
+if ($_POST) {
+    // Definimos as propriedades do usuário com os valores do formulário.
+    $user->name = $_POST['name'];
+    $user->email = $_POST['email'];
+    $user->senha = $_POST['senha'];
+    $user->cpf = $_POST['cpf'];
+    $user->telefone = $_POST['telefone'];
+    $user->nascimento = $_POST['nascimento'];
+
+    // Tentamos criar o usuário e exibimos uma mensagem de sucesso ou erro.
+    if ($user->create()) {
+        echo '<div class="alert alert-success">Usuário criado com sucesso.</div>';
+    } else {
+        echo '<div class="alert alert-danger">Erro ao criar usuário.</div>';
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -1,67 +1,64 @@
 <?php
-// Declaração da classe Usuario
+// Definimos a classe User que vai representar um usuário no sistema.
 class Usuario {
-    // Atributo para armazenar a conexão com o banco de dados
-    private $conexao;
+    private $conn; // Propriedade que vai armazenar a conexão com o banco de dados
+    private $table_name = 'usuarios'; // Nome da tabela no banco de dados
 
-    // Construtor da classe que inicializa a conexão
-    public function __construct($conexao) {
-        $this->conexao = $conexao;
+    // Propriedades da classe que correspondem às colunas da tabela.
+    public $id;
+    public $name;
+    public $email;
+    public $senha;
+    public $cpf;
+    public $telefone;
+    public $nascimento;
+
+
+    // O construtor da classe recebe a conexão com o banco de dados.
+    public function __construct($db) {
+        $this->conn = $db;
     }
 
-    // Método para adicionar um usuario no banco de dados
-    public function adicionar($email, $senha, $cpf, $telefone, $nome_usuario, $nascimento) {
-        // SQL para inserir um novo usuario
-        $sql = "INSERT INTO usuarios (email, senha, cpf, telefone, nome_usuario, nascimento) VALUES (:email, :senha, :cpf, :telefone, :nome_usuario, :nascimento)";
-        // Prepara a consulta SQL
-        $stmt = $this->conexao->prepare($sql);
-        // Associa os valores aos parâmetros da consulta
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $senha);
-        $stmt->bindParam(':cpf', $cpf);
-        $stmt->bindParam(':telefone', $telefone);
-        $stmt->bindParam(':nome_usuario', $nome_usuario);
-        $stmt->bindParam(':nascimento', $nascimento);
-        // Executa a consulta e retorna o resultado
-        return $stmt->execute();
+    // Método para criar um novo usuário no banco de dados.
+    public function create() {
+        // Definimos a query SQL para inserir um novo usuário.
+        $query = 'INSERT INTO ' . $this->table_name . ' SET name=:name, email=:email, senha=:senha, cpf=:cpf, telefone=:telefone, nascimento=:nascimento';
+        // Preparamos a query.
+        $stmt = $this->conn->prepare($query);
+
+        // Sanitizamos os dados.
+        $this->name = htmlspecialchars(strip_tags($this->name));
+        $this->email = htmlspecialchars(strip_tags($this->email));
+        $this->senha = htmlspecialchars(strip_tags($this->senha));
+        $this->cpf = htmlspecialchars(strip_tags($this->cpf));
+        $this->telefone = htmlspecialchars(strip_tags($this->telefone));
+        $this->nascimento = htmlspecialchars(strip_tags($this->nascimento));
+
+        // Associamos os valores aos parâmetros da query.
+        $stmt->bindParam(':name', $this->name);
+        $stmt->bindParam(':email', $this->email);
+        $stmt->bindParam(':senha', password_hash($this->senha, PASSWORD_BCRYPT));
+        $stmt->bindParam(':cpf', $this->cpf);
+        $stmt->bindParam(':telefone', $this->telefone);
+        $stmt->bindParam(':nascimento', $this->nascimento);
+
+        // Executamos a query e retornamos true em caso de sucesso, ou false em caso de falha.
+        if($stmt->execute()) {
+            return true;
+        }
+        return false;
     }
 
-    // Método para listar todos os usuarios do banco de dados
-    public function listar() {
-        // SQL para selecionar todos os usuarios
-        $sql = "SELECT * FROM usuarios";
-        // Executa a consulta SQL
-        $stmt = $this->conexao->query($sql);
-        // Retorna todos os resultados da consulta como um array associativo
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    // Método para editar um usuario no banco de dados
-    public function editar($id, $email, $senha, $cpf, $telefone, $nome_usuario, $nascimento) {
-        // SQL para atualizar os dados de um usuario específico
-        $sql = "UPDATE usuarios SET email = :email, cpf = :cpf, telefone = :telefone, nome_usuario = :nome_usuario, nascimento = :nascimento WHERE id = :id";
-        // Prepara a consulta SQL
-        $stmt = $this->conexao->prepare($sql);
-        // Associa os valores aos parâmetros da consulta
-        $stmt->bindParam(':id', $id);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $senha);
-        $stmt->bindParam(':cpf', $cpf);
-        $stmt->bindParam(':telefone', $telefone);
-        $stmt->bindParam(':nome_usuario', $nome_usuario);
-        $stmt->bindParam(':nascimento', $nascimento);
-        // Executa a consulta e retorna o resultado
-        return $stmt->execute();
-    }
-
-    // Método para deletar usuarios selecionados
-    public function deletar($ids) {
-        // SQL para deletar os usuarios cujos IDs estão no array $ids
-        $sql = "DELETE FROM usuarios WHERE id IN (" . implode(',', $ids) . ")";
-        // Prepara a consulta SQL
-        $stmt = $this->conexao->prepare($sql);
-        // Executa a consulta e retorna o resultado
-        return $stmt->execute();
+    // Método para ler todos os usuários do banco de dados.
+    public function read() {
+        // Definimos a query SQL para selecionar todos os usuários.
+        $query = 'SELECT * FROM ' . $this->table_name;
+        // Preparamos a query.
+        $stmt = $this->conn->prepare($query);
+        // Executamos a query.
+        $stmt->execute();
+        // Retornamos o resultado da query.
+        return $stmt;
     }
 }
 ?>
