@@ -1,5 +1,5 @@
 <?php
-include_once 'header.php'; // Incluímos o cabeçalho
+
 include_once 'Database.php'; // Incluímos a classe Database
 include_once 'Usuario.php'; // Incluímos a classe Usuario
 
