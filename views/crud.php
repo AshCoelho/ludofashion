@@ -27,9 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = hash('sha256', $_POST['senha']);
+        $cpf = $_POST['cpf'];
+        $telefone = $_POST['telefone'];
+        $nascimento = $_POST['nascimento'];
 
-        $stmt = $pdo->prepare('INSERT INTO usuarios (nome, email, senha, perfil) VALUES (?, ?, ?, ?)');
-        $stmt->execute([$nome, $email, $senha, 'normal']);
+        $stmt = $pdo->prepare('INSERT INTO usuarios (nome, email, senha,cpf, telefone, nascimento, perfil) VALUES (?, ?, ?, ?, ?, ?, ?)');
+        $stmt->execute([$nome, $email, $senha, $cpf, $telefone, $nascimento, 'normal']);
     }
 
     // Exclusão de usuários selecionados
@@ -45,9 +48,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $id = $_POST['id'];
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-
-        $stmt = $pdo->prepare('UPDATE usuarios SET nome = ?, email = ? WHERE id = ?');
-        $stmt->execute([$nome, $email, $id]);
+        $cpf = $_POST['cpf'];
+        $telefone = $_POST['telefone'];
+        $nascimento = $_POST['nascimento'];
+        
+        $stmt = $pdo->prepare('UPDATE usuarios SET nome = ?, email = ?, cpf = ?, telefone = ?, nascimento = ? WHERE id = ?');
+        $stmt->execute([$nome, $email, $cpf, $telefone, $nascimento, $id]);
     }
 }
 ?>
