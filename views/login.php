@@ -12,14 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['user_id'] = 1; // ID do administrador
         header('Location: crud.php');
         exit();
-    } else {
+    } else { 
         // Buscar informações do usuário normal
         $stmt = $pdo->prepare('SELECT id, perfil, senha FROM usuarios WHERE email = ?');
         $stmt->execute([$email]);
         $user = $stmt->fetch();
 
         // Verificar se a senha está correta
-        if ($user && hash('sha256', $senha) === $user['senha']) {
+        if ($user && password_verify($senha, $user['senha'])) {
             $_SESSION['user_id'] = $user['id'];
             header('Location: crud.php');
             exit();
