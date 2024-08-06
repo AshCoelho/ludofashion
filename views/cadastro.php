@@ -9,7 +9,34 @@
 </head>
 <body>
     <?php @require"header.php"; ?>
-    
+
+    <?php
+    // Inclui os arquivos de conexão e da classe Carro
+    require 'conexao.php';
+    require 'cadastroclass.php';
+
+    // Cria a conexão com o banco de dados
+    $conexao = (new Conexao())->conectar();
+    // Cria uma instância da classe Carro
+    $usuario = new Usuario($conexao);
+
+    // Verifica se a requisição é do tipo POST
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Obtém os dados do formulário
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $cpf = $_POST['cpf'];
+        $telefone = $_POST['telefone'];
+        $nascimento = $_POST['nascimento'];
+
+        // Adiciona o carro no banco de dados
+        $usuario->adicionar($nome, $email, $senha, $cpf, $telefone, $nascimento);
+        // Redireciona para a página inicial
+        header('Location: index.php');
+        exit;
+    }
+?>
     <main>
         <section id="section-cadastro">
             <div id="div-form">
@@ -36,7 +63,7 @@
                         <div class="dados">
                             <div class="campo">
                                 <label for="nomeusuario">Nome de Usuário</label>
-                                <input type="text" name="nomeusuario" id="nomeusuario" placeholder="Seu Usuário" required maxlength="20">
+                                <input type="text" name="nome" id="nomeusuario" placeholder="Seu Usuário" required maxlength="20">
                             </div>
 
                             <div class="campo">
@@ -46,10 +73,12 @@
 
                             <div class="campo">
                                 <label for="datanasc">Data de Nascimento</label>
-                                <input type="date" name="datanasc" id="datanasc" required>
+                                <input type="date" name="nascimento" id="datanasc" required>
                             </div>
                         </div>
                     </div>
+                    <button type="submit">Confirme seu cadastro</button>
+                    <?php if (isset($error)) echo "<p>$error</p>"; ?>
 
                     <input type="submit" value="Cadastrar">
 
