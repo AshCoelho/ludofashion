@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="../css/cadastro.css">
 </head>
 <body>
-    <?php @require"header.php"; ?>
-
-    <?php
+    <?php @require"nav.php"; 
+    
     // Inclui os arquivos de conexão e da classe Carro
     require 'conexao.php';
     require 'cadastroclass.php';
@@ -77,9 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit">Confirme seu cadastro</button>
-                    <?php if (isset($error)) echo "<p>$error</p>"; ?>
-
+            
                     <input type="submit" value="Cadastrar">
 
                     <div class="login-cadastro">

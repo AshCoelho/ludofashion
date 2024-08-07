@@ -18,7 +18,7 @@ class Usuario {
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':senha', $senhaHash); // Usa a senha criptografada
-        $stmt->bindParam(':CPF', $CPF);
+        $stmt->bindParam(':cpf', $cpf);
         $stmt->bindParam(':telefone', $telefone);
         $stmt->bindParam(':nascimento', $nascimento);
         
@@ -49,7 +49,7 @@ class Usuario {
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':senha', $senhaHash); // Usa a senha criptografada
-        $stmt->bindParam(':CPF', $CPF);
+        $stmt->bindParam(':cpf', $cpf);
         $stmt->bindParam(':telefone', $telefone);
         $stmt->bindParam(':nascimento', $nascimento);
         

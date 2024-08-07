@@ -104,8 +104,12 @@ nav a:first-child {
     transition: all 0.4s ease-out;
 }
 
-#banner {
+.usuario {
+    justify-content: center;
+    display: flex;
+}
 
+#banner {
     width: 100%;
     background-image: url(../img/muleresrindo.jpg);
     height: 500px;

@@ -1,4 +1,5 @@
-<footer>
+
+    <footer>
         <div class="footer-container">
             <div class="footer-section about">
                 <h2>Departamentos</h2>
@@ -29,7 +30,6 @@
                     <li><a href="categorias.php">Categoria</a></li>
                     <li><a href="login.php">Login</a></li>
                     <li><a href="cadastro.php">Cadastro</a></li>
-                    <li><a href="cadastro.php">cadastro</a></li>
                 </ul>
             </div>
             <div class="footer-section social">
@@ -40,7 +40,11 @@
                     <a href="#"><img src="../img/whats.png" alt="WhatsApp"></a>
                 </div>
             </div>
-        </div>
+            <div class="footer-section usuario">
+                <ul class="font">
+                    <li><a href="logout.php">Sair da Página</a></li>
+                </ul>
+            </div>
         <div class="footer-bottom">
             <p class="font">&copy; 2024 LudoFashion | Todos os direitos reservados.</p>
         </div>

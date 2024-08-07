@@ -79,6 +79,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="email" name="email" required>
         <label>Senha:</label>
         <input type="password" name="senha" required>
+        <label>Cpf:</label>
+        <input type="text" name="cpf" required>
+        <label>Telefone:</label>
+        <input type="text" name="telefone" required>
+        <label>Nascimento:</label>
+        <input type="text" name="nascimento" required>
         <button type="submit" name="adicionar">Adicionar</button>
     </form>
 
@@ -106,6 +112,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type='hidden' name='id' value='{$row['id']}'>
                             <input type='text' name='nome' value='{$row['nome']}' required>
                             <input type='email' name='email' value='{$row['email']}' required>
+                            <input type='cpf' name='cpf' value='{$row['cpf']}' required>
+                            <input type='telefone' name='telefone' value='{$row['telefone']}' required>
+                            <input type='nascimento' name='nascimento' value='{$row['nascimento']}' required>
                             <button type='submit' name='editar'>Editar</button>
                         </form>
                     </td>
