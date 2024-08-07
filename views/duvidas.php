@@ -7,7 +7,7 @@
     <title>Ludo Fashion</title>
 </head>
 <body>
-    <?php @require"header.php"; ?>
+    <?php @require"nav.php"; ?>
     <main>
         <h1 class="titulo-main">Principais perguntas:</h1>
         <div class="imagem">

@@ -7,7 +7,7 @@
     <title>LudoFashion</title>
 </head>
 <body>
-    <?php @require"header.php"; ?>
+    <?php @require"nav.php"; ?>
     <main>
         <div id="nav-nav">
             <h1 id="nav1">Produtos Cadastrados</h1>

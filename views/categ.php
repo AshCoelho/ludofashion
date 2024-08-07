@@ -7,7 +7,7 @@
     <title>Ludo Fashion</title>
 </head>
 <body>
-    <?php @require"header.php"; ?>
+    <?php @require"nav.php"; ?>
     <main>
         <section id="main">
             <div class="menu">

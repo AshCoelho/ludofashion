@@ -41,7 +41,7 @@
     require 'config.php';
 
     ?>
-        <?php require"header.php"?>
+        <?php require"nav.php"?>
         <section id="banner">
                 <div id="txt-banner">
                     <p style="font-size: 25px;">Promoção</p>

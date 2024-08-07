@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <?php @require "header.php"; ?>
+    <?php @require "nav.php"; ?>
     <main>
         <section id="login">
             <div id="formulario">

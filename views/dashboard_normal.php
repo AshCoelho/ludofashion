@@ -28,7 +28,7 @@ if (isset($_SESSION['user_id'])) {
     <title>Ludo Fashion</title>
 </head>
 <body>
-<?php require"header.php"?>
+<?php require"nav.php"?>
         <h1 class="usuario" >Olá Usuário!</h1>
         <section id="banner">
                 <div id="txt-banner">

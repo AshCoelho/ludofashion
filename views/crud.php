@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
 </head>
 <body>
-    <?php @require"header.php"; ?>
+    <?php @require"nav.php"; ?>
     <h1>Gerenciamento de Usuários</h1>
 
     <!-- Formulário para adicionar um novo usuário -->
