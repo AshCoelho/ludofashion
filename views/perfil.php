@@ -7,7 +7,49 @@
     <title>LudoFashion</title>
 </head>
 <body>
-    <?php @require"nav.php"; ?>
+    <?php require"nav.php"; ?>
+    <?php require"config.php"?>
+    <?php
+session_start();
+require 'config.php';
+
+// Verificar se o usuário está logado
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
+
+// Buscar informações do usuário
+$stmt = $pdo->prepare('SELECT * FROM usuarios WHERE id = ?');
+$stmt->execute([$user_id]);
+$user_info = $stmt->fetch();
+
+// Processar edição de informações
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $senha = $_POST['senha'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $cpf = $_POST['cpf'];
+    $nascimento = $_POST['nascimento'];
+    
+    // Verificar se a senha foi fornecida e atualizá-la
+    if (!empty($_POST['senha'])) {
+        $senha = hash('sha256', $_POST['senha']);
+        $stmt = $pdo->prepare('UPDATE usuarios SET senha = ?, email = ?, telefone = ?, cpf = ?, nascimento = ? WHERE id = ?');
+        $stmt->execute([$senha, $email, $telefone, $cpf, $nascimento,  $user_id]);
+    } else {
+        // Atualizar apenas os campos não sensíveis
+        $stmt = $pdo->prepare('UPDATE usuarios SET senha = ?, email = ?, telefone = ?, cpf = ?, nascimento = ? WHERE id = ?');
+        $stmt->execute([$senha, $email, $telefone, $cpf, $nascimento,  $user_id]);
+    }
+    
+    // Redirecionar para evitar reenvio de formulário
+    header('Location: perfil.php');
+    exit();
+}
+?>
     <main>
         <section>
             <div id="menu">
@@ -23,34 +65,43 @@
                 </div>
                 
                 <div id="perfil-grid">
-                    <form action="">
-                        <label for="" id="nome-usuario" >Nome do usuário:</label>
-                        <input type="text" name="nome-usuario" class="input" placeholder="Fulano123" id="nomeuser"> <br>
+                    <form method="post" action="">
 
-                        <label for="" id="nome">Nome:</label>
-                        <input type="text" name="nome" placeholder="Fulano da Silva Costa" id="nome"> <br>
-
-                        <label for="">Número de telefone:</label>
-                        <input type="tel" name="telefone" placeholder="(98) 9 3576-9232" class="input"> <a href="" class="editar" id="edit">Editar</a> <br>
+                        
+                        <label for="nome">Senha:</label>
+                        <input type="text" name="nome" class="input" class="editar" id="edit" value="<?php echo htmlspecialchars($user_info['nome']);?>" required>Editar <br>
 
                         <label for="">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="fulanocosta@gmail.com" class="input"><a href="" class="editar" id="editar">Editar</a> <br>
+                        <input type="email" name="email" id="email"  class="input" required class="editar" id="editar" value="<?php echo htmlspecialchars($user_info['email']);?>"> Editar <br>
 
-                        <label for=""  class="input">Sexo:</label>
+                        <label for="" >Telefone:</label>
+                        <input type="text" name="telefone"class="input" class="editar" id="editar" value="<?php echo htmlspecialchars($user_info['telefone']);?>" required>Editar <br>
+
+                        <label for="" >Sexo:</label>
                         <input type="radio" name="sexo"  > Masculino
                         <input type="radio" name="sexo"  > Feminino
-                        <input type="radio" name="sexo"  > Outros<br>
+                        <input type="radio" name="sexo"  > Outros
+                        <br>
 
-                        <label for="">Nome/CPF</label>
-                        <input type="text" name="cpf" class="input" placeholder="Fulano Costa - 071.843.281-23"> <a href="" class="editar" id="editar">Editar</a> <br>
+                        <label for="">CPF</label>
+                        <input type="text" name="cpf" class="input" value="<?php echo htmlspecialchars($user_info['cpf']);?>" required> <br>
 
                         <label for="" name="nascimento" id="nascimento">Data de nascimento:</label>
-                        <input type="text" class="input" placeholder="03/06/2000"> <br>
+                        <input type="text" name="cpf" class="input" value="<?php echo htmlspecialchars($user_info['nascimento']);?>" required> <br>
 
                         <input type="submit" value="Gravar" id="gravar">
                     </form>
                     
                 </div>
+                    <div class="informacoes-usuario">
+                <h2 class="titulo-informacoes">Gerenciar e proteger sua conta</h2>
+                <ul>
+                    <li><strong>Senha:</strong> <?php echo htmlspecialchars($user_info['senha']); ?></li>
+                    <li><strong>Email:</strong> <?php echo htmlspecialchars($user_info['email']); ?></li>
+                    <li><strong>Telefone:</strong> <?php echo htmlspecialchars($user_info['telefone']); ?></li>
+                    <li><strong>cpf:</strong> <?php echo htmlspecialchars($user_info['cpf']); ?></li>
+                </ul>
+            </div>
             </div>
         </section>
     </main>

@@ -176,8 +176,8 @@ form {
 
 .input {
     margin-bottom: 3%;
-    background-color: var(--cor-tercearia);
-    border: none;
+    background-color: var(--cor-branco);
+    border-radius: 5px;
 }
 input:hover {
     outline: none;
@@ -197,19 +197,6 @@ footer {
 }
 #gravar:hover {
     background-color: var(--cor-secundaria);
-}
-#edit {
-    margin-left: -2.3rem;
-}
-.editar {
-    color: var(--cor-primaria);
-}
-.editar:hover {
-    color: var(--cor-branco)
-}
-
-#editar {
-    margin-left: 0.6rem;
 }
 
 footer {
