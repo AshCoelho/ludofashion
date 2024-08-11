@@ -40,11 +40,7 @@
                     <a href="#"><img src="../img/whats.png" alt="WhatsApp"></a>
                 </div>
             </div>
-            <div class="footer-section usuario">
-                <ul class="font">
-                    <li><a href="logout.php">Sair da Página</a></li>
-                </ul>
-            </div>
+            
         <div class="footer-bottom">
             <p class="font">&copy; 2024 LudoFashion | Todos os direitos reservados.</p>
         </div>

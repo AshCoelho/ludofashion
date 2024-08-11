@@ -7,9 +7,8 @@
     <title>LudoFashion</title>
 </head>
 <body>
-    <?php require"nav.php"; ?>
-    <?php require"config.php"?>
     <?php
+    require"nav.php"; 
 session_start();
 require 'config.php';
 
@@ -69,13 +68,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         
                         <label for="nome">Senha:</label>
-                        <input type="text" name="nome" class="input" class="editar" id="edit" value="<?php echo htmlspecialchars($user_info['nome']);?>" required>Editar <br>
+                        <input type="text" name="nome" class="input" class="editar" id="edit" value="" required>Editar <br>
 
                         <label for="">Email:</label>
-                        <input type="email" name="email" id="email"  class="input" required class="editar" id="editar" value="<?php echo htmlspecialchars($user_info['email']);?>"> Editar <br>
+                        <input type="email" name="email" id="email"  class="input" required class="editar" id="editar" value=""> Editar <br>
 
                         <label for="" >Telefone:</label>
-                        <input type="text" name="telefone"class="input" class="editar" id="editar" value="<?php echo htmlspecialchars($user_info['telefone']);?>" required>Editar <br>
+                        <input type="text" name="telefone"class="input" class="editar" id="editar" value="" required>Editar <br>
 
                         <label for="" >Sexo:</label>
                         <input type="radio" name="sexo"  > Masculino
@@ -84,24 +83,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <br>
 
                         <label for="">CPF</label>
-                        <input type="text" name="cpf" class="input" value="<?php echo htmlspecialchars($user_info['cpf']);?>" required> <br>
+                        <input type="text" name="cpf" class="input" value="" required> <br>
 
                         <label for="" name="nascimento" id="nascimento">Data de nascimento:</label>
-                        <input type="text" name="cpf" class="input" value="<?php echo htmlspecialchars($user_info['nascimento']);?>" required> <br>
+                        <input type="text" name="cpf" class="input" value="" required> <br>
 
                         <input type="submit" value="Gravar" id="gravar">
                     </form>
                     
                 </div>
-                    <div class="informacoes-usuario">
-                <h2 class="titulo-informacoes">Gerenciar e proteger sua conta</h2>
-                <ul>
-                    <li><strong>Senha:</strong> <?php echo htmlspecialchars($user_info['senha']); ?></li>
-                    <li><strong>Email:</strong> <?php echo htmlspecialchars($user_info['email']); ?></li>
-                    <li><strong>Telefone:</strong> <?php echo htmlspecialchars($user_info['telefone']); ?></li>
-                    <li><strong>cpf:</strong> <?php echo htmlspecialchars($user_info['cpf']); ?></li>
-                </ul>
-            </div>
+                 
             </div>
         </section>
     </main>

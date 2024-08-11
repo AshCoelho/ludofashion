@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $telefone = $_POST['telefone'];
         $nascimento = $_POST['nascimento'];
 
-        $stmt = $pdo->prepare('INSERT INTO usuarios (nome, email, senha,cpf, telefone, nascimento, perfil) VALUES (?, ?, ?, ?, ?, ?, ?)');
+        $stmt = $pdo->prepare('INSERT INTO usuarios (nome, email, senha, cpf, telefone, nascimento, perfil) VALUES (?, ?, ?, ?, ?, ?, ?)');
         $stmt->execute([$nome, $email, $senha, $cpf, $telefone, $nascimento, 'normal']);
     }
 
@@ -112,9 +112,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type='hidden' name='id' value='{$row['id']}'>
                             <input type='text' name='nome' value='{$row['nome']}' required>
                             <input type='email' name='email' value='{$row['email']}' required>
-                            <input type='cpf' name='cpf' value='{$row['cpf']}' required>
-                            <input type='telefone' name='telefone' value='{$row['telefone']}' required>
-                            <input type='nascimento' name='nascimento' value='{$row['nascimento']}' required>
+                            <input type='text' name='cpf' value='{$row['cpf']}' required>
+                            <input type='text' name='telefone' value='{$row['telefone']}' required>
+                            <input type='text' name='nascimento' value='{$row['nascimento']}' required>
                             <button type='submit' name='editar'>Editar</button>
                         </form>
                     </td>

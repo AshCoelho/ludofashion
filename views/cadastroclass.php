@@ -40,7 +40,7 @@ class Usuario {
     public function editar($id, $nome, $email, $senha, $cpf, $telefone, $nascimento) {
         $senhaHash = hash('sha256', $senha); // Criptografa a senha usando SHA-256
         
-        $sql = "UPDATE usuarios SET nome = :nome, email = :email, senha = :senha, CPF = :CPF,  telefone = :telefone, nascimento = :nascimento  WHERE id = :id";
+        $sql = "UPDATE usuarios SET nome = :nome, email = :email, senha = :senha, cpf = :cpf,  telefone = :telefone, nascimento = :nascimento  WHERE id = :id";
         // Prepara a consulta SQL
         $stmt = $this->conexao->prepare($sql);
 
