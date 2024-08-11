@@ -37,9 +37,9 @@ if (isset($_SESSION['user_id'])) {
         <button type="submit" id="btn-buscar" alt=""><img src="../img/lupa.png" alt="lupa" width="25px"></button>
     </form>
 
-    <a href="perfil.php" class="icon-link">
-        <img src="../img/perfil-logado.png" alt="">
-        Perfil
+    <a href="crud.php" class="icon-link">
+        <img src="../img/admin.png" alt="">
+        Usuários
     </a>
 
 
@@ -52,6 +52,10 @@ if (isset($_SESSION['user_id'])) {
         Sair
     </a>
 </header>
+<nav>
+        <a href="catalogo.php" class="catalogo">Catálogo</a>
+        <a href="sobre.php" class="sobre">Sobre a Loja</a>
+    </nav>
         <h1 class="usuario" >Olá Administrador!</h1>
         <section id="banner">
                 <div id="txt-banner">

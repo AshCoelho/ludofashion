@@ -2,17 +2,18 @@
 session_start();
 require 'config.php';
 
+
 // Processar o login
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Verifica se 'email' e 'senha' estão definidos
     if (isset($_POST['email']) && isset($_POST['senha'])) {
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
+        $email = trim($_POST['email']);
+        $senha = trim($_POST['senha']);
 
         // Verificar se o login é para o administrador
-        if ($email === 'admin@exemplo.com' && hash('sha256', $senha) === hash('sha256', 'senha_admin')) {
+        if ( $email === 'admin@exemplo.com' && password_verify('sha256', $senha) === hash('sha256', 'senha_admin')) {
             $_SESSION['user_id'] = 1; // ID do administrador
-            header('Location: crud.php');
+            header('Location:dashboard_admin.php');
             exit();
         } else { 
             // Buscar informações do usuário normal
@@ -23,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Verificar se a senha está correta
             if ($user && hash('sha256', $senha) === $user['senha']) {
                 $_SESSION['user_id'] = $user['id'];
-                header('Location: index.php');
+                header('Location:index.php');
                 exit();
             } else {
                 $error = 'Email ou senha incorretos!';
@@ -32,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $error = 'Por favor, preencha todos os campos!';
     }
+
 }
 
 ?>
@@ -45,7 +47,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <?php @require "nav.php"; ?>
+<header>
+    <a href="" class="ludo"><img src="../img/logo.png" alt="" width="60px"></a>
+    <form action="" id="form-buscar">
+        <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
+        <button type="submit" id="btn-buscar" alt=""><img src="../img/lupa.png" alt="lupa" width="25px"></button>
+    </form>
+
+    <a href="cadastro.php" class="icon-link">
+        <img src="../img/perfil.png" alt="">
+        Cadastre-se
+    </a>
+
+
+    <a href="duvidas.php" class="icon-link">
+        <img src="../img/ajuda.png" alt="Ajuda">
+        Dúvidas
+    </a>
+</header>
     <main>
         <section id="login">
             <div id="formulario">
@@ -73,6 +92,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </section>          
     </main>
-    <?php @require "footer.php"; ?>
 </body>
 </html>
