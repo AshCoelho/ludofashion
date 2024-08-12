@@ -32,13 +32,13 @@
     </nav>
     <?php  
     
-    // Inclui os arquivos de conexão e da classe Carro
+     // Inclui os arquivos de conexão e da classe Usuario
     require 'conexao.php';
     require 'cadastroclass.php';
 
     // Cria a conexão com o banco de dados
     $conexao = (new Conexao())->conectar();
-    // Cria uma instância da classe Carro
+   // Cria uma instância da classe Usuario
     $usuario = new Usuario($conexao);
 
     // Verifica se a requisição é do tipo POST
@@ -62,6 +62,8 @@
         <section id="section-cadastro">
             <div id="div-form">
                 <h1>Cadastrar</h1>
+
+                 <!-- Formulário de cadastro -->
                 <form action="cadastro.php" method="post">
                     <div class="div-inputs">
                         <div class="dados">
@@ -100,7 +102,7 @@
                     </div>
             
                     <input type="submit" value="Cadastrar">
-
+                     <!-- Link para login -->
                     <div class="login-cadastro">
                         <a href="login.php">Já tem conta?</a>
                     </div>
@@ -108,6 +110,7 @@
             </div>
         </section>         
     </main>
+    <!-- Rodapé -->
     <?php @require"footer.php"; ?>
 </body>
 </html>

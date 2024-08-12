@@ -69,6 +69,7 @@ class Usuario {
 
     // Método para verificar a senha fornecida
     public function verificarSenha($senhaFornecida, $senhaHash) {
+        // Compara a senha fornecida com a senha armazenada (criptografada) no banco de dados
         return hash('sha256', $senhaFornecida) === $senhaHash;
     }
 }
