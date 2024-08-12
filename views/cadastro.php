@@ -51,10 +51,10 @@
         $telefone = $_POST['telefone'];
         $nascimento = $_POST['nascimento'];
 
-        // Adiciona o carro no banco de dados
+        // Adiciona o usuario no banco de dados
         $usuario->adicionar($nome, $email, $senha, $cpf, $telefone, $nascimento);
         // Redireciona para a página inicial
-        header('Location: index.php');
+        header('Location: login.php');
         exit;
     }
 ?>

@@ -56,7 +56,7 @@ if (isset($_SESSION['user_id'])) {
         <a href="catalogo.php" class="catalogo">Catálogo</a>
         <a href="sobre.php" class="sobre">Sobre a Loja</a>
     </nav>
-        <h1 class="usuario" >Olá Administrador!</h1>
+        <h1 class="usuario" >Olá Administrador, seja bem vindo!</h1>
         <section id="banner">
                 <div id="txt-banner">
                     <p style="font-size: 25px;">Promoção</p>

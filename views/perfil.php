@@ -67,14 +67,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <form method="post" action="">
 
                         
-                        <label for="nome">Senha:</label>
-                        <input type="text" name="nome" class="input" class="editar" id="edit" value="" required>Editar <br>
+                        <label for="senha">Nova senha:</label>
+                        <input type="text" name="senha" class="input" class="editar" id="edit" value="<?php echo htmlspecialchars($user_info['senha']); ?>" required>Editar <br>
 
                         <label for="">Email:</label>
-                        <input type="email" name="email" id="email"  class="input" required class="editar" id="editar" value=""> Editar <br>
+                        <input type="email" name="email" id="email"  class="input" required class="editar" id="editar" value="<?php echo htmlspecialchars($user_info['email']); ?>"  placeholder="exemplo@email.com"> Editar <br>
 
                         <label for="" >Telefone:</label>
-                        <input type="text" name="telefone"class="input" class="editar" id="editar" value="" required>Editar <br>
+                        <input type="text" name="telefone"class="input" class="editar" id="editar" value="<?php echo htmlspecialchars($user_info['telefone']); ?>" required  placeholder="3960-2739">Editar <br>
 
                         <label for="" >Sexo:</label>
                         <input type="radio" name="sexo"  > Masculino
@@ -83,16 +83,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <br>
 
                         <label for="">CPF</label>
-                        <input type="text" name="cpf" class="input" value="" required> <br>
+                        <input type="text" name="cpf" class="input" value="" required  placeholder="238.402.783-73"> <br>
 
                         <label for="" name="nascimento" id="nascimento">Data de nascimento:</label>
-                        <input type="text" name="cpf" class="input" value="" required> <br>
+                        <input type="text" name="cpf" class="input" value="" required  placeholder="23/05/2001"> <br>
 
                         <input type="submit" value="Gravar" id="gravar">
                     </form>
                     
                 </div>
-                 
             </div>
         </section>
     </main>
