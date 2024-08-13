@@ -6,10 +6,12 @@ require 'config.php';
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 
+    // Prepara e executa uma consulta SQL para obter o perfil do usuário com base no ID
     $stmt = $pdo->prepare('SELECT perfil FROM usuarios WHERE id = ?');
     $stmt->execute([$user_id]);
+    // Obtém o perfil do usuário a partir do resultado da consulta
     $user = $stmt->fetch();
-
+// Bloco de verificação do perfil do usuário
     if ($user['perfil'] !== 'normal') {
         header('Location: index.php');
         exit();

@@ -2,19 +2,23 @@
 session_start();
 require 'config.php';
 
-// Verificar login e perfil
+// Bloco de verificação de autenticação e perfil do usuário
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 
+   // Prepara e executa uma consulta SQL para obter o perfil do usuário com base no ID
     $stmt = $pdo->prepare('SELECT perfil FROM usuarios WHERE id = ?');
     $stmt->execute([$user_id]);
     $user = $stmt->fetch();
 
+
+    // Bloco de verificação do perfil do usuário
     if ($user['perfil'] !== 'administrador') {
         header('Location: index.php');
         exit();
     }
 } else {
+    // Redireciona para a página de login se o usuário não estiver autenticado
     header('Location: login.php');
     exit();
 }

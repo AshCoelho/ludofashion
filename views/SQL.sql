@@ -18,11 +18,11 @@ CREATE TABLE usuarios (
 );
 
 
+-- Inserção do usuario e administrador 
 INSERT INTO usuarios (nome, email, senha, cpf, telefone, nascimento, perfil) VALUES 
 ('normal', 'normal@exemplo.com', SHA2('12345678', 256), '12345678912', '123456789123', '2024-12-12','normal');
 
 
--- Inserção do administrador inicial
 INSERT INTO usuarios (nome, email, senha, perfil) VALUES 
 ('Administrador', 'admin@exemplo.com', SHA2('senha_admin', 256), 'administrador');
 
