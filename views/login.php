@@ -3,14 +3,14 @@ session_start();
 require 'config.php';
 
 
-// Processar o login
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Verifica se 'email' e 'senha' estão definidos
+    
     if (isset($_POST['email']) && isset($_POST['senha'])) {
         $email = trim($_POST['email']);
         $senha = trim($_POST['senha']);
 
-        // Verificar se o login é para o administrador
+        
         if ( $email === 'admin@exemplo.com' && password_verify('sha256', $senha) === hash('sha256', 'senha_admin')) {
             $_SESSION['user_id'] = 1; // ID do administrador
             header('Location:dashboard_admin.php');
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute([$email]);
             $user = $stmt->fetch();
 
-            // Verificar se a senha está correta
+            
             if ($user && hash('sha256', $senha) === $user['senha']) {
                 $_SESSION['user_id'] = $user['id'];
                 header('Location:index.php');

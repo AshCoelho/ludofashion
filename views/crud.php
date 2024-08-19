@@ -1,36 +1,28 @@
 <?php
-// Inicia uma sessão para acessar variáveis de sessão
 session_start();
-// Requer o arquivo de configuração do banco de dados
 require 'config.php';
 
-// Verificar se o usuário está logado e é um administrador
 if (!isset($_SESSION['user_id'])) {
-    // Se o usuário não estiver logado, redireciona para a página de login
     header('Location: login.php');
-    // Encerra o script
     exit();
 }
 
 // Obtém o ID do usuário a partir da sessão
 $user_id = $_SESSION['user_id'];
 
-// Prepara uma consulta para buscar o perfil do usuário
 $stmt = $pdo->prepare('SELECT perfil FROM usuarios WHERE id = ?');
-$stmt->execute([$user_id]);// Executa a consulta com o ID do usuário
-$user = $stmt->fetch();// Armazena o resultado da consulta
+$stmt->execute([$user_id]);
+$user = $stmt->fetch(); //armazenar
 
-// Se não for administrador, redirecionar para login
 if ($user['perfil'] !== 'administrador') {
     header('Location: login.php');
-    exit();// Encerra o script
+    exit();
 }
 
-// Verifica se o método de requisição é POST para processar o formulário
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Processa a inclusão de um novo usuário
+        
     if (isset($_POST['adicionar'])) {
-          // Coleta os dados do formulário
+          
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = hash('sha256', $_POST['senha']);
@@ -38,27 +30,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $telefone = $_POST['telefone'];
         $nascimento = $_POST['nascimento'];
 
-        // Prepara uma consulta para inserir o novo usuário no banco de dados
+       
         $stmt = $pdo->prepare('INSERT INTO usuarios (nome, email, senha, cpf, telefone, nascimento, perfil) VALUES (?, ?, ?, ?, ?, ?, ?)');
-        // Executa a consulta com os dados fornecidos
+       
         $stmt->execute([$nome, $email, $senha, $cpf, $telefone, $nascimento, 'normal']);
     }
 
-    // Processa a exclusão de usuários selecionados
+   
     if (isset($_POST['excluir'])) {
-         // Obtém os IDs dos usuários selecionados
         $ids = $_POST['ids'];
         // Converte os IDs para inteiros e cria uma string separada por vírgulas
         $ids = implode(',', array_map('intval', $ids));
-        // Prepara uma consulta para excluir os usuários selecionados
         $stmt = $pdo->prepare("DELETE FROM usuarios WHERE id IN ($ids)");
-        // Executa a consulta
         $stmt->execute();
     }
 
     // Processa a edição de informações de um usuário
     if (isset($_POST['editar'])) {
-        // Coleta os dados do formulário de edição
         $id = $_POST['id'];
         $nome = $_POST['nome'];
         $email = $_POST['email'];
@@ -66,9 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $telefone = $_POST['telefone'];
         $nascimento = $_POST['nascimento'];
         
-        // Prepara uma consulta para atualizar as informações do usuário
         $stmt = $pdo->prepare('UPDATE usuarios SET nome = ?, email = ?, cpf = ?, telefone = ?, nascimento = ? WHERE id = ?');
-        // Executa a consulta com os dados fornecidos
         $stmt->execute([$nome, $email, $cpf, $telefone, $nascimento, $id]);
     }
 }

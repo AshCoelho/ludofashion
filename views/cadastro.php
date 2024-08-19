@@ -32,18 +32,18 @@
     </nav>
     <?php  
     
-     // Inclui os arquivos de conexão e da classe Usuario
+    
     require 'conexao.php';
     require 'cadastroclass.php';
 
-    // Cria a conexão com o banco de dados
+    
     $conexao = (new Conexao())->conectar();
-   // Cria uma instância da classe Usuario
+
     $usuario = new Usuario($conexao);
 
-    // Verifica se a requisição é do tipo POST
+   
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // Obtém os dados do formulário
+      
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
@@ -51,9 +51,9 @@
         $telefone = $_POST['telefone'];
         $nascimento = $_POST['nascimento'];
 
-        // Adiciona o usuario no banco de dados
+        
         $usuario->adicionar($nome, $email, $senha, $cpf, $telefone, $nascimento);
-        // Redireciona para a página inicial
+      
         header('Location: login.php');
         exit;
     }

@@ -1,10 +1,8 @@
--- Criação do banco de dados
+
 CREATE DATABASE usuarios_db;
 
--- Seleção do banco de dados
 USE usuarios_db;
 
--- Criação da tabela de usuários
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
